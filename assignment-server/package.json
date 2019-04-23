@@ -1,0 +1,23 @@
+{
+  "name": "Assignment-employee-app",
+  "version": "1.0.0",
+  "description": "FashionDx hiring assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "None"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "Assignment"
+  ],
+  "author": "Derek",
+  "license": "None",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.2"
+  }
+}
