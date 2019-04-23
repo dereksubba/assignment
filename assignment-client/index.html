@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js">
+        <link rel="stylesheet" type="text/css" href="app.css" />
+        </script>
+    	<script src="app.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="get">
+            
+            <p>GET SERVICE</p>
+
+            <table [className]="'assignment-table-field'">
+
+            <td>First Name</td>
+            <td>Second Name</td>
+
+            <tr ng-repeat="x in greeting" [className]="'assignment-table-field'">
+                <td>{{ x.firstName }}</td>
+                <td>{{ x.secondName }}</td>
+            </tr>
+            </table>
+            
+            <form ng-style="mat-form-field" >
+                <br />
+            <br />
+            <br />
+            <br />
+                <p>POST SERVICE</p>
+                <post-form-field>
+                <post-label>First name</post-label>
+                <input ng-model="first" />
+                </post-form-field>
+                
+                <post-form-field>
+                <post-label>Last name</post-label>
+                <input ng-model="last" />
+                </post-form-field>
+                
+                <button ng-click="postName()">Post</button>
+            </form>
+            
+            <form ng-style="mat-form-field" >
+            <br />
+            <br />
+            <br />
+            <br />
+                <p>PUT SERVICE</p>
+                <div>Select to Update <select ng-model="selectedNameUpdate" ng-options="x.firstName for x in greeting"></select>
+                <post-form-field>
+                <post-label>First name</post-label>
+                <input ng-model="firstNameUpdate" />
+                </post-form-field>
+                
+                <post-form-field>
+                <post-label>Last name</post-label>
+                <input ng-model="lastNameUpdate" />
+                </post-form-field>
+                
+                <button ng-click="updateName()">Update</button>
+            </form>
+            
+            <br \>
+            <br \>
+            <p>DELETE SERVICE</p>
+            <div>Select to Delete <select ng-model="selectedName" ng-options="x.firstName for x in greeting"></select>
+
+            <button ng-click="deleteName()">Delete</button>
+            </div>
+            </div>
+
+	</body>
+</html>
